@@ -7,7 +7,7 @@
     </provider>
 
 		<!-- entities -->
-		<class>com.skilldistillery.cryptowallet.Wallet</class>
+		<class>com.skilldistillery.cryptowallet.entities.Wallet</class>
 		<!-- end entities -->
 
 

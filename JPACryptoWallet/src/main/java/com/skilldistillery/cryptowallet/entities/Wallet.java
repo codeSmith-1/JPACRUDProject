@@ -1,4 +1,4 @@
-package com.skilldistillery.cryptowallet;
+package com.skilldistillery.cryptowallet.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
