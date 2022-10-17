@@ -19,7 +19,7 @@
   <c:when test="${not empty newTrans}">
    <p>Transaction added: ${newTrans.id }</p>
   </c:when>
-  <c:when test="${success == true}">
+  <c:when test="${delete == true}">
    <p>Transaction deleted.</p>
   </c:when>
   <c:otherwise>

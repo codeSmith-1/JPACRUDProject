@@ -55,11 +55,12 @@ public class WalletController {
 		redir.addFlashAttribute("newTrans", dao.createTransaction(wallet));
 		return "wallet/success";
 	}
+	
 	@RequestMapping(path = "submitTrans.do", method = RequestMethod.POST)
 	public String submitNew(Wallet wallet, RedirectAttributes redir) {
 		Wallet submit = dao.createTransaction(wallet);
-		redir.addFlashAttribute("newTrans", dao.createTransaction(wallet));
-		return "wallet/success";
+		redir.addFlashAttribute("newTrans", submit);
+		return "redirect:success.do";
 	}
 	
 	

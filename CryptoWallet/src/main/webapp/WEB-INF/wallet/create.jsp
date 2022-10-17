@@ -27,17 +27,27 @@
 				$("#datepicker").datepicker();
 			});
 		</script>
-		
+
 		<h2>Create Transaction</h2>
 
 		<hr>
-
 		<form action="submitTrans.do" name=form method="POST">
+			<select class="form-select" aria-label="Default select example"
+				name="currency">
+				<option selected>Currency</option>
+				<option value="Bitcoin">Bitcoin</option>
+				<option value="Ethereum">Ethereum</option>
+				<option value="Solana">Solana</option>
+			</select>
 
-			<br> Currency: <input type="text" name="currency"> 
-			<br> Price: <input type="number" name="price"> 
-			<br> Amount acquired: <input type="number" step="any" name="amount"> 
-			<input type="submit" value="Create" /> <br>
+			<div class="input-group">
+				<span class="input-group-addon">$</span> <input name="price" type="text"
+					class="form-control" placeholder="Price" />
+			</div>
+			Amount acquired: <input type="number" step="any" name="amount">
+			<br>
+			Date: <input type="date" name="date"/>
+			<br> <input type="submit" value="Create" /> <br>
 		</form>
 	</main>
 </body>

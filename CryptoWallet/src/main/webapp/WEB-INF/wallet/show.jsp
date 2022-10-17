@@ -54,21 +54,31 @@
 	</table>
 
 
-	<form action="edit.do" name=form method="POST">
-	<input type="hidden" name="id" value="${trans.id }"/>
-		<br> Currency: <input type="text" name="currency" value="${trans.currency }"/>
-		<br> Price: <label for="currency-field"></label><input type="number" name="price" value="${trans.price }">  
-		 <br> Amount acquired: <input type="number" name="amount" value="${trans.amount }"> 
-				<input type="hidden" name="symbol" value="${trans.symbol }"/>
-		<br>
-		<input type="submit" value="Update"/>
-	<br>
-		<script>
-			$(function() {
-				$("#datepicker").datepicker();
-			});
-		</script>
-	</form>
+<form action="edit.do" name=form method="POST">
+			<select class="form-select" aria-label="Default select example"
+				name="currency">
+				<option selected>Currency</option>
+				<option value="Bitcoin">Bitcoin</option>
+				<option value="Ethereum">Ethereum</option>
+				<option value="Solana">Solana</option>
+			</select>
+
+			<div class="input-group">
+				<span class="input-group-addon">$</span> <input name="price" type="text"
+					class="form-control" placeholder="Price" value="${trans.price }"/>
+			</div>
+
+			
+			Amount acquired: <input type="number" step="any" name="amount">
+			<input type="hidden" name="symbol" value="${trans.symbol }"/>
+			<input type="hidden" name="id" value="${trans.id }"/>
+			<br> <input type="submit" value="Update" /> 
+			<input type="date" name="date" value="${trans.date }"/>
+			<br>
+		</form>
+
+
+	
 	</main>
 </body>
 
