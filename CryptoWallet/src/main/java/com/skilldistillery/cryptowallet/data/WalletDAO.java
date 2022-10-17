@@ -6,7 +6,7 @@ import com.skilldistillery.cryptowallet.entities.Wallet;
 
 public interface WalletDAO {
 	List<Wallet> findAll();
-	Wallet findTransById(int id);
+	Wallet findById(int id);
 	List<Wallet> findTransBySymbol(String symbol);
 	Wallet createTransaction(Wallet w);
 	boolean deleteTransaction(int id);

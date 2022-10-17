@@ -2,6 +2,7 @@ package com.skilldistillery.cryptowallet.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,8 +16,11 @@ public class Wallet {
 	private int id;
 	private String currency;
 	private String symbol;
+	@Column(name = "purchase_price")
 	private double price;
+	@Column(name = "purchase_amount")
 	private double amount;
+	@Column(name = "purchase_date")
 	private LocalDate date;
 
 	public Wallet() {

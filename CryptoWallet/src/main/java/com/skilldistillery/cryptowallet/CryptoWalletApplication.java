@@ -1,4 +1,4 @@
-package com.skilldistillery.cryptowallet.entities;
+package com.skilldistillery.cryptowallet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

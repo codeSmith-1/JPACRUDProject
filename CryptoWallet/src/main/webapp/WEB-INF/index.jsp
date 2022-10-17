@@ -14,10 +14,10 @@
 <jsp:include page="navBar.jsp"/>
 <main class="container-fluid">
 	<h1>Crypto Wallet</h1>
-
-	<form action="home.do" method="GET">
-		Transaction ID: <input type="text" name="id" class="form-control"/> 
-		<input type="submit" value="Display Trans" class="btn btn-primary"/>
+	
+	<form action="delete.do" method="POST">
+		Delete by ID: <input type="number" name="id" value="${wallet.id }" class="form-control"/> 
+		<input type="submit" value="Delete" class="btn btn-primary btn-sm"/>
 	</form>
 	<hr>
 	<table class="table table-striped table-hover">
@@ -32,7 +32,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		</tbody>
+		
 		<c:forEach var="c" items="${cryptos}">
 			<tr>
 				<td>${c.id}</td>
@@ -40,11 +40,18 @@
 				<td>${c.currency}</td>
 				<td>${c.price}</td>
 				<td>${c.amount}</td>
-				<td>${c.date}</td>
-				<td><a href="getTrans.do?fid=${c.id}">${c.date }</a>
+				<td><a href="getTrans.do?id=${c.id}">${c.date }</a>
 			</tr>
 		</c:forEach>
+	</tbody>
 	</table>
+	<a href="create.do" type="button" class="btn btn-success">Create Transaction</a>
+		<br>
+		<blockquote class="blockquote text-center">
+  <p class="mb-0">"It is great wealth to a soul to live frugally with a contented mind."</p>
+ <p> <footer class="blockquote-footer"><cite title="Source Title">Lucretius</p></cite></footer>
+</blockquote>
+
 	</main>
 </body>
 </html>

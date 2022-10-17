@@ -2,5 +2,17 @@
 
 body {
 	background-color: lightgray;
-	color: navy;
+	color: DarkOrange;
+	font-family: 'Roboto', sans-serif;
+	
 }
+
+
+/* 
+    .search-box i {
+        color: #a0a5b1;
+        position: absolute;
+        font-size: 19px;
+        top: 8px;
+        left: 10px;
+    } */
