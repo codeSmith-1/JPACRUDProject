@@ -20,13 +20,6 @@
 
 		<jsp:include page="../navBar.jsp" />
 
-		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-		<script>
-			$(function() {
-				$("#datepicker").datepicker();
-			});
-		</script>
 
 		<h2>Create Transaction</h2>
 
@@ -34,19 +27,18 @@
 		<form action="submitTrans.do" name=form method="POST">
 			<select class="form-select" aria-label="Default select example"
 				name="currency">
-				<option selected>Currency</option>
 				<option value="Bitcoin">Bitcoin</option>
 				<option value="Ethereum">Ethereum</option>
 				<option value="Solana">Solana</option>
 			</select>
 
 			<div class="input-group">
-				<span class="input-group-addon">$</span> <input name="price" type="text"
+				<span class="input-group-addon">$</span> <input required="required" name="price" type="text"
 					class="form-control" placeholder="Price" />
 			</div>
-			Amount acquired: <input type="number" step="any" name="amount">
+			Amount acquired: <input required="required" type="number" step="any" name="amount">
 			<br>
-			Date: <input type="date" name="date"/>
+			Date: <input required="required" type="date" name="date"/>
 			<br> <input type="submit" value="Create" /> <br>
 		</form>
 	</main>

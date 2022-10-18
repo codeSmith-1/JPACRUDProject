@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `wallet` (
   `symbol` VARCHAR(4) NULL,
   `purchase_price` DECIMAL(8,2) NULL,
   `purchase_amount` DECIMAL(8,2) NULL,
-  `purchase_date` DATE NULL,
+  `purchase_date` VARCHAR(10) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

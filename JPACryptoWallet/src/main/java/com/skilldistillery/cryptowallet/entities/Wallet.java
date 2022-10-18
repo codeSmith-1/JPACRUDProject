@@ -21,7 +21,7 @@ public class Wallet {
 	@Column(name = "purchase_amount")
 	private double amount;
 	@Column(name = "purchase_date")
-	private LocalDate date;
+	private String date;
 
 	public Wallet() {
 	}
@@ -42,11 +42,11 @@ public class Wallet {
 		this.amount = amount;
 	}
 
-	public LocalDate getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDate date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
